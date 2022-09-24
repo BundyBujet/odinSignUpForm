@@ -1,0 +1,164 @@
+/* Global Rules */
+:root {
+  --main-padding: 15px;
+  --main-margin: 25px;
+  --btn-color: #163042;
+  --alrt-color: #ff2b4b;
+  --focus-color: #308bf7;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Global Rules */
+.container {
+  display: flex;
+  height: 100vh;
+}
+.container .img-cont {
+  background-image: url(../img/halie-west-45yYvqx4AQo-unsplash.jpg);
+  background-position: -700px -400px;
+  background-repeat: no-repeat;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-top: 10rem;
+}
+.logo img {
+  width: 100px;
+}
+@font-face {
+  font-family: Norse-bold;
+  src: url(../font/Norse-Bold.otf);
+}
+.logo p {
+  font-family: Norse-bold, sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .img-cont {
+    width: 100%;
+  }
+  .logo {
+    margin-top: 0px;
+  }
+}
+.container .form-cont {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  background-color: #eee;
+}
+.container .form-cont p {
+  padding-left: calc(1rem + var(--main-padding));
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 55px;
+  padding-right: 200px;
+}
+.container form .frm-field {
+  background-color: white;
+  padding-left: calc(1rem + var(--main-padding));
+  display: flex;
+  flex-direction: column;
+  padding-right: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.container form .frm-field label {
+  display: block;
+  height: 25px;
+}
+.container form .name-info,
+.container form .cnt-info,
+.container form .pass-info {
+  display: flex;
+  margin-top: 25px;
+}
+.container form .fname,
+.container form .email,
+.container form .pass {
+  margin-right: 30px;
+}
+.container form .frm-field h2 {
+  margin: 0;
+}
+.container form .frm-field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.container form .frm-field input {
+  border: 1px solid #bbb;
+  height: 25px;
+  border-radius: 2px;
+  width: 250px;
+}
+.container form .frm-field input:focus {
+  outline: 1px solid var(--focus-color);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.container form .frm-field [type="email"]:invalid {
+  outline: 1px solid var(--alrt-color);
+}
+.container button {
+  background-color: var(--btn-color);
+  color: white;
+  padding: 1rem;
+  border: none;
+  margin-left: calc(1rem + var(--main-padding));
+  margin-top: 25px;
+  width: 200px;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+}
+.container .login {
+  font-size: 0.9rem !important;
+  margin-top: calc(1rem + var(--main-padding));
+  margin-bottom: 0 !important;
+}
+.container .login a {
+  text-decoration: none;
+  color: var(--focus-color);
+}
+@media (max-width: 768px) {
+  .container .form-cont {
+    padding-top: 0;
+  }
+  .container form .name-info,
+  .container form .cnt-info,
+  .container form .pass-info {
+    flex-direction: column;
+  }
+  .container .form-cont p {
+    padding-right: 0;
+  }
+  .container form .frm-field {
+    padding-right: 0;
+  }
+  .container button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .login {
+    text-align: center;
+    padding-left: 0 !important;
+  }
+}

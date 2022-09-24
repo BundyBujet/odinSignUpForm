@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Sing-up Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-cont">
+        <div class="logo">
+          <img src="./img/odin-lined.png" alt="" />
+          <p>ODIN</p>
+        </div>
+      </div>
+      <div class="form-cont">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up now
+          to get started.
+        </p>
+        <form action="#" method="post">
+          <div class="frm-field">
+            <h2>Let's do This!</h2>
+            <div class="name-info">
+              <div class="fname">
+                <label for="fname">First Name</label>
+                <input type="text" name="fName" id="fname" required />
+              </div>
+              <div class="lname">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lName" id="lname" required />
+              </div>
+            </div>
+            <div class="cnt-info">
+              <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="phone">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" />
+              </div>
+            </div>
+            <div class="pass-info">
+              <div class="pass">
+                <label for="pass">Password</label>
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  maxlength="12"
+                  required
+                />
+              </div>
+              <div class="cpass">
+                <label for="cpass">Confirm Password</label>
+                <input
+                  type="password"
+                  name="cpass"
+                  id="cpass"
+                  maxlength="12"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Creat Account</button>
+          <p class="login">Already have an account? <a href="#">Log in</a></p>
+        </form>
+      </div>
+    </div>
+    <script>
+      let pass = document.querySelector("#pass");
+      let cpass = document.querySelector("#cpass");
+      cpass.addEventListener("blur", function (e) {
+        if (e.target.value === pass.value) {
+          cpass.style.outline = "1px solid #0FF74D";
+          pass.style.outline = "1px solid #0FF74D";
+        } else {
+          pass.style.outline = "1px solid #ff2b4b";
+          cpass.style.outline = "1px solid #ff2b4b";
+        }
+      });
+      pass.addEventListener("blur", function (e) {
+        if (e.target.value === cpass.value) {
+          cpass.style.outline = "1px solid #0FF74D";
+          pass.style.outline = "1px solid #0FF74D";
+        } else {
+          pass.style.outline = "1px solid #ff2b4b";
+          cpass.style.outline = "1px solid #ff2b4b";
+        }
+      });
+    </script>
+  </body>
+</html>
